@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="dashboard.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <style>
+      /* body {
+        margin-top: 40px;
+        padding: 0 20px;
+      } */
+      progress {
+        height: 45px;
+      }
+
+      progress::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 5px;
+      }
+
+      progress::-webkit-progress-value {
+        background-color: #337ab7;
+        border-radius: 5px;
+      }
+
+      progress::-moz-progress-bar {
+        background-color: #337ab7;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">Dashboard Total Harga Kategori Makanan</span>
+    </nav>
+
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mt-4">
+            <div class="card-header">Pie Chart East</div>
+            <div class="card-body">
+              <div class="text-center" id="chart2"></div>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-header">Pie Chart West</div>
+            <div class="card-body">
+              <div class="text-center" id="chart3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 mt-4">
+          <div class="card">
+            <div class="card-header">Bar Chart</div>
+            <div class="card-body">
+              <div class="text-center" id="chart1"></div>
+            </div>
+          </div>
+          <div style="display: flex">
+            <div class="card mt-4" style="width: 50%">
+              <div class="card-header">
+                Total Harga Keseluruhan Kategori Makanan di Negara East
+              </div>
+              <div class="card-body">
+                <div id="number1"></div>
+                <div class="mt-2" style="display: flex">
+                  <p class="mt-2">0</p>
+                  <progress
+                    class="ml-4 mr-4"
+                    style="width: 100%"
+                    id="progress1"
+                    max="50000"
+                  ></progress>
+                  <p class="mt-2">50000</p>
+                </div>
+              </div>
+            </div>
+            <div class="card mt-4 ml-4" style="width: 50%">
+              <div class="card-header">
+                Total Harga Keseluruhan Kategori Makanan di Negara West
+              </div>
+              <div class="card-body">
+                <div id="number2"></div>
+                <div class="mt-2" style="display: flex">
+                  <p class="mt-2">0</p>
+                  <progress
+                    class="ml-4 mr-4"
+                    style="width: 100%"
+                    id="progress2"
+                    max="50000"
+                  ></progress>
+                  <p class="mt-2">50000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+
+    <div id="chart2"></div>
+    <!-- Tambahkan lebih banyak elemen div untuk grafik lainnya -->
+  </body>
+</html>
